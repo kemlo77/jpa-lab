@@ -1,20 +1,22 @@
-package furniture;
+package phonebook.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="person")
+@Table(name = "person")
 public class PersonEntity {
 
   @Id
+  @GeneratedValue
   private int id;
   private String name;
   private int height;
 
-  public PersonEntity(){}
-
+  public PersonEntity() {
+  }
 
   public int getId() {
     return id;

@@ -1,8 +1,8 @@
-package furniture;
+package phonebook;
 
 import org.junit.jupiter.api.Test;
 
-public class PersonEntityTest {
+class PersonEntityTest {
 
   @Test
   void firstTest() {
