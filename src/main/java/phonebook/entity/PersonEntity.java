@@ -1,5 +1,8 @@
 package phonebook.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,11 +18,22 @@ public class PersonEntity {
   private String name;
   private int height;
 
+  @ElementCollection
+  private List<Address> address = new ArrayList<>();
+
   public PersonEntity() {
   }
 
   public int getId() {
     return id;
+  }
+
+  public List<Address> getAdresses() {
+    return address;
+  }
+
+  public void setAddress(List<Address> address) {
+    this.address = address;
   }
 
   public void setId(int id) {

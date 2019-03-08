@@ -18,13 +18,16 @@ public class UpdatePerson {
 
     entityManager.getTransaction().begin();
 
-    PersonEntity person = entityManager.find(PersonEntity.class, 1);
+    PersonEntity person = entityManager.find(PersonEntity.class, 151);
+
     System.out.println("Before");
     System.out.println("id: " + person.getId());
     System.out.println("Name: " + person.getName());
     System.out.println("Height: " + person.getHeight());
 
     person.setHeight(174);
+    person.getAdresses().get(0).setStreet("Mjölnargränd");
+
 
     entityManager.persist(person);
 
